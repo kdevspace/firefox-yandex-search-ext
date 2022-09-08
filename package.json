@@ -1,0 +1,24 @@
+{
+  "name": "yandex-search-engine-web-ext",
+  "version": "1.0.1",
+  "description": "Yandex search engine",
+  "scripts": {
+    "build": "web-ext build --overwrite-dest -a ./dist -s ./src",
+    "run": "web-ext run"
+  },
+  "keywords": [
+    "firefox",
+    "extension",
+    "yandex",
+    "search",
+    "яндекс"
+  ],
+  "author": "KDev",
+  "license": "MIT",
+  "devDependencies": {
+    "web-ext": "^6.2.0"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}
