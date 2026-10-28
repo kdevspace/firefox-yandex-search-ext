@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "Yandex Search Engine",
   "short_name": "yandex_search_engine",
-  "description": "Adds Yandex search engine to Firefox. Search selected text or an image from the context menu.",
-  "version": "1.1.0",
+  "description": "Adds Yandex search engine to Firefox. Search selected text, a link, or an image from the context menu.",
+  "version": "1.2.0",
   "default_locale": "ru",
   "icons": {
     "16": "icons/yandex.svg",
@@ -11,21 +11,48 @@
     "256": "icons/yandex.svg"
   },
   "permissions": [
-    "menus"
+    "menus",
+    "storage",
+    "search",
+    "activeTab",
+    "https://ya.ru/*",
+    "https://yandex.kz/*"
   ],
+  "browser_action": {
+    "default_title": "__MSG_browserActionTitle__",
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/yandex.svg"
+  },
+  "options_ui": {
+    "page": "options/options.html"
+  },
   "background": {
     "scripts": [
+      "region.js",
       "background.js"
     ]
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ya.ru/search*",
+        "https://yandex.kz/search*"
+      ],
+      "js": [
+        "region.js",
+        "content/apply-region.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
   "chrome_settings_overrides": {
     "search_provider": {
-      "name": "Yandex search engine",
+      "name": "__MSG_searchProviderName__",
       "keyword": "@yandex",
-      "favicon_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Yandex_icon.svg/24px-Yandex_icon.svg.png",
+      "favicon_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Yandex_icon.svg/120px-Yandex_icon.svg.png",
       "search_form": "https://ya.ru/?clid=15215578",
       "search_url": "https://ya.ru/search",
-      "search_url_get_params": "text={searchTerms}&numdoc=200&filter=none&rd=0&clid=15215578",
+      "search_url_get_params": "text={searchTerms}&numdoc=200&filter=none&rd=0&lr=225&clid=15215578",
       "suggest_url": "https://suggest.yandex.ru/suggest-ff.cgi",
       "suggest_url_get_params": "part={searchTerms}",
       "is_default": true,
@@ -36,6 +63,9 @@
     "gecko": {
       "id": "YandexSearchEngineExtension@space.kdev",
       "strict_min_version": "68.0"
+    },
+    "gecko_android": {
+      "strict_min_version": "120.0"
     }
   },
   "author": "KDev",

@@ -1,8 +1,38 @@
 {
+  "searchProviderName": {
+    "message": "Яндекс"
+  },
+  "browserActionTitle": {
+    "message": "Поиск Яндекс"
+  },
   "searchSelection": {
     "message": "Найти в Яндексе «%s»"
   },
   "searchImage": {
     "message": "Найти эту картинку в Яндексе"
+  },
+  "searchLink": {
+    "message": "Найти ссылку в Яндексе"
+  },
+  "regionLabel": {
+    "message": "Регион выдачи"
+  },
+  "regionRu": {
+    "message": "Россия"
+  },
+  "regionBy": {
+    "message": "Беларусь"
+  },
+  "regionKz": {
+    "message": "Казахстан"
+  },
+  "regionHelp": {
+    "message": "Россия и Беларусь открываются на ya.ru, Казахстан — на yandex.kz. Адресная строка подстраивается под выбранный регион."
+  },
+  "popupPlaceholder": {
+    "message": "Запрос"
+  },
+  "popupSearch": {
+    "message": "Найти"
   }
 }

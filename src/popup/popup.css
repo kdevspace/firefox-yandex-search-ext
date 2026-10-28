@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font: 14px sans-serif;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  padding: 6px 8px;
+}
+
+button {
+  font: inherit;
+  padding: 6px 10px;
+  background: #fc3f1d;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+}

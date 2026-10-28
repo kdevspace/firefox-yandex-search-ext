@@ -1,8 +1,38 @@
 {
+  "searchProviderName": {
+    "message": "Yandex"
+  },
+  "browserActionTitle": {
+    "message": "Yandex search"
+  },
   "searchSelection": {
     "message": "Search Yandex for \"%s\""
   },
   "searchImage": {
     "message": "Search this image on Yandex"
+  },
+  "searchLink": {
+    "message": "Search this link on Yandex"
+  },
+  "regionLabel": {
+    "message": "Search region"
+  },
+  "regionRu": {
+    "message": "Russia"
+  },
+  "regionBy": {
+    "message": "Belarus"
+  },
+  "regionKz": {
+    "message": "Kazakhstan"
+  },
+  "regionHelp": {
+    "message": "Russia and Belarus open on ya.ru. Kazakhstan opens on yandex.kz. The address bar follows the selected region."
+  },
+  "popupPlaceholder": {
+    "message": "Query"
+  },
+  "popupSearch": {
+    "message": "Search"
   }
 }

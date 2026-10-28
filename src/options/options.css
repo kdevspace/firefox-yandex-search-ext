@@ -1,0 +1,26 @@
+body {
+  font: 14px/1.4 sans-serif;
+  margin: 16px;
+  color: #1a1a1a;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+label {
+  display: block;
+  margin: 6px 0;
+}
+
+#region-help {
+  max-width: 36em;
+  color: #555;
+}
