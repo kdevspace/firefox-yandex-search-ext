@@ -1,0 +1,8 @@
+{
+  "searchSelection": {
+    "message": "Search Yandex for \"%s\""
+  },
+  "searchImage": {
+    "message": "Search this image on Yandex"
+  }
+}

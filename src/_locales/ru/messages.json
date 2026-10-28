@@ -1,0 +1,8 @@
+{
+  "searchSelection": {
+    "message": "Найти в Яндексе «%s»"
+  },
+  "searchImage": {
+    "message": "Найти эту картинку в Яндексе"
+  }
+}

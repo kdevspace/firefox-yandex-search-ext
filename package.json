@@ -1,6 +1,6 @@
 {
   "name": "yandex-search-engine-web-ext",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Yandex search engine",
   "scripts": {
     "build": "web-ext build --overwrite-dest -a ./dist -s ./src",

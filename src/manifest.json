@@ -2,25 +2,40 @@
   "manifest_version": 2,
   "name": "Yandex Search Engine",
   "short_name": "yandex_search_engine",
-  "description": "Adds Yandex search engine to Firefox.",
-  "version": "1.0.1",
+  "description": "Adds Yandex search engine to Firefox. Search selected text or an image from the context menu.",
+  "version": "1.1.0",
+  "default_locale": "ru",
   "icons": {
     "16": "icons/yandex.svg",
     "64": "icons/yandex.svg",
     "256": "icons/yandex.svg"
+  },
+  "permissions": [
+    "menus"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
   },
   "chrome_settings_overrides": {
     "search_provider": {
       "name": "Yandex search engine",
       "keyword": "@yandex",
       "favicon_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Yandex_icon.svg/24px-Yandex_icon.svg.png",
-      "search_url": "https://yandex.com/search/?text={searchQuery}"
+      "search_form": "https://ya.ru/?clid=15215578",
+      "search_url": "https://ya.ru/search",
+      "search_url_get_params": "text={searchTerms}&numdoc=200&filter=none&rd=0&clid=15215578",
+      "suggest_url": "https://suggest.yandex.ru/suggest-ff.cgi",
+      "suggest_url_get_params": "part={searchTerms}",
+      "is_default": true,
+      "encoding": "UTF-8"
     }
   },
   "browser_specific_settings": {
     "gecko": {
       "id": "YandexSearchEngineExtension@space.kdev",
-      "strict_min_version": "55.0"
+      "strict_min_version": "68.0"
     }
   },
   "author": "KDev",
